@@ -1,0 +1,122 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@200;300&family=Ubuntu:wght@300;400&display=swap');
+
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+
+ }
+ .main-box{
+  position: relative;
+  background: url(bg1.jpg) right no-repeat  ;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+ } 
+ .main-box .slidebar-menu{
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  left: -250px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+ }
+ .slidebar-menu .logo{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow:  0 0 6px rgba(255, 255, 255, 0.5);;
+ }
+ .slidebar-menu .logo a{
+  color: #fff;
+  font-size: 250x;
+  font-weight: 700;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+  text-decoration: none;
+ }
+ .slidebar-menu .menu{
+  position: absolute;
+  top: 80px;
+  width: 100%;
+ }
+ .slidebar-menu .menu li{
+  margin-top: 6px;
+  padding: 15px 20px;
+  transition: all 0.2s linear;
+ }
+ .slidebar-menu .menu i{
+  color: #fff;
+  font-size: 30;
+  padding-right: 8px;
+ }
+ .slidebar-menu .menu a{
+  color: #fff;
+  font-size: 30;
+  text-decoration: none;
+ }
+ .slidebar-menu .menu li:hover{
+border-left: 1px solid #fff;
+box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+ }
+ .slidebar-menu .social-media{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+ }
+.social-media i{
+  padding: 0 5px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 17px;
+  transition: all 0.2s linear;
+}
+.social-media i:hover{
+  opacity: 2;
+}
+#check{
+  display: none;
+}
+.main-box .btn-one i{
+color: #fff;
+font-size: 30px;
+font-weight: 700;
+position: absolute;
+left: 15px;
+line-height: 60px;
+cursor: pointer;
+opacity: 1;
+transition: all 0.3s linear;
+} 
+
+.main-box .btn-two i{
+ /* color: black;  */
+ font-size: 30px;
+  line-height: 60px;
+  position: absolute;
+  left: 215px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s linear;
+ } 
+
+.btn-one i:hover{
+  font-size: 29px;
+}
+.btn-two i:hover{
+  font-size: 23;
+}
+#check:checked ~.slidebar-menu{
+  left: 0px;
+}
+#check:checked ~ .btn-one i{
+  opacity: 0;
+}
+#check:checked ~ .slidebar-menu .btn-two i{
+  opacity: 0;
+}
